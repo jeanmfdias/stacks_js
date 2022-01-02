@@ -1,0 +1,11 @@
+{
+  "name": "stacks_js",
+  "version": "1.0.0",
+  "description": "Library to manipulate stacks",
+  "main": "index.js",
+  "author": "jeanmfdias <jeanmfdias@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "tests": "node tests/tests.js"
+  }
+}
