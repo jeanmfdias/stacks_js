@@ -10,7 +10,13 @@ console.log(Stack.lenght());
 console.log('--- test peek');
 console.log(Stack.peek());
 
-console.log('--- test isempty')
+console.log('--- test isempty');
 console.log(Stack.isEmpty());
+
+console.log('--- test pop');
+console.log(Stack.pop());
+
+console.log('--- test lenght after pop');
+console.log(Stack.lenght());
 
 Stack.print();

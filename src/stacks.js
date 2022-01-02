@@ -12,7 +12,10 @@ class Stacks {
 
     // delete an element from the stack
     pop() {
-
+        if (this.isEmpty() === false) {
+            this.top = this.top - 1;
+            return this.data.pop();
+        }
     }
 
     // get the top element of the stack
