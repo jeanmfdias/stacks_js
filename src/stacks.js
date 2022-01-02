@@ -32,7 +32,7 @@ class Stacks {
 
     // check if the stack is empty
     isEmpty() {
-
+        return this.top === 0;
     }
 
     // print the elements of the stack
