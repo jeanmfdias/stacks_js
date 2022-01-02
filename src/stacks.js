@@ -18,7 +18,7 @@ class Stacks {
     }
 
     lenght() {
-
+        return this.top;
     }
 
     search() {

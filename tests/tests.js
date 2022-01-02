@@ -1,5 +1,7 @@
-const Stacks = require('../src/stacks');
+const Stack = require('../src/stacks');
 
-Stacks.push("hello");
+Stack.push("hello");
 
-Stacks.print();
+console.log(Stack.lenght());
+
+Stack.print();
