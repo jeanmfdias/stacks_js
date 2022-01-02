@@ -1,5 +1,10 @@
+const lifo = 'lifo';
+const fifo = 'fifo';
+
 class Stacks {
-    constructor() {
+    // LIFO or FIFO
+    constructor(type = lifo) {
+        this.type = type;
         this.data = [];
         this.top = 0;
     }
@@ -13,8 +18,27 @@ class Stacks {
     // delete an element from the stack
     pop() {
         if (this.isEmpty() === false) {
-            this.top = this.top - 1;
-            return this.data.pop();
+            switch (this.type) {
+                // delete by fifo method
+                case fifo:
+                    let newStack = [];
+                    let top = this.top - 1;
+                    let i = 0;
+                    let valueDeleted = this.data[0];
+
+                    while (top > 0) {
+                        newStack[i] = this.data[top];
+                        top--;
+                        i++;
+                    }
+                    this.data = newStack;
+                    this.top = this.top - 1;
+                    return valueDeleted;
+                // delete by lifo method
+                case lifo:
+                    this.top = this.top - 1;
+                    return this.data.pop();
+            }
         }
     }
 
@@ -57,6 +81,10 @@ class Stacks {
         this._reverse(this.top - 1);
     }
 
+    getType() {
+        return this.type.toUpperCase();
+    }
+
     _reverse(index) {
         if (index !== 0) {
             this._reverse(index - 1);
@@ -64,6 +92,14 @@ class Stacks {
 
         console.log (this.data[index]);
     }
+
+    static get lifo() {
+        return lifo;
+    }
+
+    static get fifo() {
+        return fifo;
+    }
 }
 
-module.exports = new Stacks()
+module.exports = Stacks;
