@@ -29,8 +29,13 @@ class Stacks {
     }
 
     // search for the element in the stack
-    search() {
+    search(search) {
+        if (search < this.top) {
+            return this.data[search];
+        }
 
+        console.log('element not found');
+        return false;;
     }
 
     // check if the stack is empty

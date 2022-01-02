@@ -25,3 +25,9 @@ Stack.print();
 
 console.log('--- test reverse');
 Stack.reverse();
+
+console.log('--- test search element');
+console.log(Stack.search(1));
+
+console.log('--- test search element invalid');
+console.log(Stack.search(100));
