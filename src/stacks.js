@@ -40,7 +40,24 @@ class Stacks {
 
     // print the elements of the stack
     print() {
+        let top = this.top - 1;
 
+        while (top >= 0) {
+            console.log(this.data[top]);
+            top--;
+        }
+    }
+
+    reverse() {
+        this._reverse(this.top - 1);
+    }
+
+    _reverse(index) {
+        if (index !== 0) {
+            this._reverse(index - 1);
+        }
+
+        console.log (this.data[index]);
     }
 }
 
