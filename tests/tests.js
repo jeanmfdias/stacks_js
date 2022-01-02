@@ -1,3 +1,5 @@
 const Stacks = require('../src/stacks');
 
-Stacks.helloWorld();
+Stacks.push("hello");
+
+Stacks.print();
